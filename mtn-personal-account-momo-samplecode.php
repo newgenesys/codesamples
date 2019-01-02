@@ -20,7 +20,7 @@ public function mtnmomo(){
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($ch, CURLOPT_POSTFIELDS, "idbouton=$idbouton&typebouton=$typebouton&_amount=$_amount&_tel=$_tel&_clP=$_clp&_email=$_email&submit.x=$submitx&submit.y=$submity");
   curl_setopt($ch, CURLOPT_POST, 1);
-  curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, false); //false will prevent curl from verifying the SSL certificate
+  curl_setopt ( $ch, CURLOPT_SSL_VERIFYPEER, true); //false will prevent curl from verifying the SSL certificate
 
   $result = curl_exec($ch);
 
